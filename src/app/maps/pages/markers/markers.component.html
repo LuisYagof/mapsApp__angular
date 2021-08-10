@@ -1,0 +1,17 @@
+<ul class="list-group">
+  <li class="list-group-item list-group-item-info"
+    (click)="addMarker()">
+    Add
+  </li>
+  <li *ngFor="let marker of markers; let i = index"
+    class="list-group-item"
+    (click)="goMarker(marker)"
+    (dblclick)="deleteMarker(marker, i)"
+    [ngStyle]="{'background-color': marker.color, 'color': 'white'}">
+    Mark {{i + 1}}
+  </li>
+</ul>
+
+
+<div #mapid
+  class="mapWrapper"></div>

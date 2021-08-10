@@ -1,11 +1,15 @@
-html, body {
+.mapWrapper {
   width: 100%;
   height: 100%;
 }
 
-app-menu {
+.list-group {
   position: fixed;
+  right: 20px;
   top: 20px;
-  left: 20px;
   z-index: 999;
-} 
+}
+
+li {
+  cursor: pointer;
+}

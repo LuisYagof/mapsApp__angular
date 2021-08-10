@@ -1,0 +1,31 @@
+<div class="marginWrap">
+
+  <div class="row mt-3">
+    <!-- <div class="col-3"></div> -->
+    <div class="col">
+      <h2>Properties list</h2>
+      <hr>
+    </div>
+  </div>
+
+  <div class="row container">
+    <!-- <div class="col-2"></div> -->
+
+    <div class="col">
+      <div class="row">
+        <div *ngFor="let prop of properties; let i = index"
+          class="col-4 mb-2">
+          <div class="card">
+            <app-mini-map [lngLat]="prop.lngLat"
+              class="card-img-top"></app-mini-map>
+            <div class="card-body">
+              <h5 class="card-title"> {{prop.title}} </h5>
+              <p class="card-text"> {{prop.desc}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
